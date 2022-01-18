@@ -42,7 +42,11 @@ npm test -- --runInBand
 
 # Funcionalidade 
 
-Para definir uma funcionalidade será preciso utilizar dos métodos (Dado, Quando, Entao) para realizar as ações nas implementações dos testes. Para facilitar o gerenciamento da aplicação você também poderá adicionar uma "tag" antes da funcionalidade, facilitando o encontro de funcionalidades semelhantes. Um bom exemplo seria funcionalidades de relatório. Geralmente uma aplicação de relatórios contenha mais de um tipo de relatório ou partes diferentes de um sistema.
+Uma funcionalidade pode ser entendica como um conjunto de ações que precisam ser realizadas para ter um fim específico ou suprimir alguma necessidade do usuário. Pode ser coisas simples como um botão que limpa um filtro de formulário ou complexas como a geração de um relatório.
+
+Para definir a sintax de uma funcionalidade será preciso utilizar dos métodos (Dado, Quando, Entao) para realizar as ações nas implementações dos testes. Para facilitar o gerenciamento da aplicação você também poderá adicionar uma "tag" antes da funcionalidade, facilitando o encontro de funcionalidades semelhantes. 
+
+Geralmente uma aplicação de relatórios contem mais de um tipo de relatório ou partes diferentes de um sistema, a utilização das tags facilitaria a visualização dos testes realizados
 
 Para utilizar uma "tag", verifique o exemplo abaixo :
 
@@ -64,6 +68,10 @@ Quando
 
 Entao
 * Utilizado para informar o resultado das ações realizadas, geralmente composto por uma sintaxa que contenha a mensagem do retorno da API. Ex : "Entao será exibida a mensagem : "Dados incorretos! Por favor, verifique as informações e tente novamente.".
+
+# Autenticação
+
+Essa automação funciona em conjunto com uma aplicação de autenticação encontrada em : [Sistemas de Autenticação](https://github.com/LeonRWorker/system-auth). Caso não utilize uma das aplicações listadas acima, ignore a url (link de acesso) informada nos cenários da funcionalidade a seguir.
 
 ```feature
 
