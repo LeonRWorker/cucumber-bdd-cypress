@@ -96,7 +96,7 @@ Entao será exibida a mensagem : "Dados incorretos! Por favor, verifique as info
 
 ```
 
-## Autenticação
+### Autenticação
 
 Essa automação funciona em conjunto com uma aplicação de autenticação encontrada em : [Sistemas de Autenticação](https://github.com/LeonRWorker/system-auth). Caso não utilize uma das aplicações listadas acima, ignore a url (link de acesso) informada nos cenários da funcionalidade a seguir e adapte o código.
 
@@ -288,7 +288,7 @@ Then(/também exibida a mensagem : "Verifique suas credenciais, login ou senha i
 
 Note que na primeira sintaxe o código é simplificado, melhorando sua produtividade e mantendo código mais "clean"
 
-## Autenticação
+### Autenticação
 
 Relembrando, a automação funciona em conjunto com uma aplicação de autenticação encontrada em : [Sistemas de Autenticação](https://github.com/LeonRWorker/system-auth). Caso não utilize uma das aplicações listadas acima, ignore a url (link de acesso) informada nos cenários da funcionalidade a seguir e adapte o código.
 
