@@ -41,12 +41,24 @@ npm test -- --runInBand
 
 [Leonardo Marques](https://github.com/LeonRWorker/)
 
-# Documentação 
+# Documentação da Aplicação
 
 
 # Funcionalidade 
 
-Para definir uma funcionalidade será preciso utilizar dos métodos (Dado, Quando, Entao) para realizar as ações nas implementações dos testes.
+Para definir uma funcionalidade será preciso utilizar dos métodos (Dado, Quando, Entao) para realizar as ações nas implementações dos testes. Para facilitar o gerenciamento da aplicação você também poderá adicionar uma "tag" antes da funcionalidade, facilitando o encontro de funcionalidades semelhantes. Um bom exemplo seria funcionalidades de relatório. Geralmente uma aplicação de relatórios contenha mais de um tipo de relatório ou partes diferentes de um sistema.
+
+Para utilizar uma "tag", verifique o exemplo abaixo :
+
+```feature
+
+#language: pt
+@Autenticação
+
+```
+
+Você notou o comentário "#language: pt" ? Esse argumento serve para identificar a lingaguem que está sendo utilizada na feature. Aliás, não se esqueça de instalar o 
+Gherkin Cucumber (Extensão Visual Studio Code).
 
 Dado 
 * Utilizado para informar a primeira condição, servindo para informar o que precisa ou será feito. Ex : "Dado que o usuário precise realizar a autenticação em um sistema".
