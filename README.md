@@ -278,7 +278,7 @@ Then(/também exibida a mensagem : "Verifique suas credenciais, login ou senha i
 
 ```
 
-Note que na primeira sintaxe o código é simplificado, melhorando sua produtividade e mantando código mais "clean"
+Note que na primeira sintaxe o código é simplificado, melhorando sua produtividade e mantendo código mais "clean"
 
 # Autor
 
