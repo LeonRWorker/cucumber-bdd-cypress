@@ -1,0 +1,71 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Trata-se de uma automação de testes com intuito de verificar cada elemento ou dado exibido pelo sistema que já foi ou está sendo desenvolvido por você, sua equipe de desenvolvimento ou órgão e empresa a qual se encontra.",
+  "main": "index.js",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "chokidar": "^3.5.2",
+    "commitizen": "^4.2.4",
+    "cosmiconfig": "^7.0.1",
+    "cucumber": "^7.0.0-rc.0",
+    "cucumber-expressions": "^8.3.0",
+    "cucumber-tag-expressions": "^2.0.3",
+    "cypress": "^8.3.0",
+    "cypress-cucumber-preprocessor": "^4.2.0",
+    "cypress-xpath": "^1.6.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "dargs": "^8.1.0",
+    "debug": "^4.3.2",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-cypress": "^2.11.3",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^3.4.1",
+    "fs-extra": "^10.0.0",
+    "gherkin": "^9.0.0",
+    "glob": "^7.1.7",
+    "graceful-fs": "^4.2.8",
+    "husky": "^7.0.2",
+    "jest": "^27.1.0",
+    "js-string-escape": "^1.0.1",
+    "jsonfile": "^6.1.0",
+    "lint-staged": "^11.1.2",
+    "minimist": "^1.2.5",
+    "multiple-cucumber-html-reporter": "^1.18.0",
+    "prettier": "^2.3.2",
+    "semantic-release": "^17.4.7",
+    "through": "^2.3.8",
+    "universalify": "^2.0.0"
+  },
+  "devDependencies": {
+    "cucumber-html-reporter": "^5.5.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/integration/",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".json"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:run": "cypress run ",
+    "postcypress:run": "node ./cypress/support/multiple-cucumber-html-reporter.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeonRWorker/cucumber-bdd-cypress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeonRWorker/cucumber-bdd-cypress/issues"
+  },
+  "homepage": "https://github.com/LeonRWorker/cucumber-bdd-cypress#readme"
+}
