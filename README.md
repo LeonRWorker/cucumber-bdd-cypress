@@ -43,6 +43,12 @@ npm test -- --runInBand
 
 # Documentação 
 
-[![texto alternativo](http://i.imgur.com/tXSoThF.png)](http://www.twitter.com/meunome "texto título")
+
+```bash
+
+Funcionalidade: Autenticação
+
+
+```
 
 
