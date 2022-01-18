@@ -25,10 +25,10 @@ A aplicação consiste em uma ferramenta que verifica se cada elemento encontrad
 
 ```bash
 # Clonar repositório
-git clone https://gitlab.com/cadic/testes-automatizados-interno-2021 front-end
+git clone https://github.com/LeonRWorker/cucumber-bdd-cypress frontend
 
 # Entrar na pasta do projeto
-cd front-end
+cd frontend
 
 # Instalar dependências
 npm install
@@ -41,4 +41,4 @@ npm test -- --runInBand
 
 # Autor
 
-[Flex Grid](https://github.com/LeonRWorker/)
+[Leonardo Marques](https://github.com/LeonRWorker/)
