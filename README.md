@@ -44,7 +44,7 @@ Para a documetação completa do Ghekin (Cucumber) acesse o site oficial da docu
 Para a documetação dos comandos do Cypress acesse o site oficial da documentação : [Comandos Cypress](https://docs.cypress.io/api/table-of-contents).
 
 
-# Funcionalidade 
+## Funcionalidade 
 
 Uma funcionalidade pode ser entendica como um conjunto de ações que precisam ser realizadas para ter um fim específico ou suprimir alguma necessidade do usuário. Pode ser coisas simples como um botão que limpa um filtro de formulário ou complexas como a geração de um relatório.
 
@@ -89,7 +89,7 @@ Entao
 Entao será exibida a mensagem : "Dados incorretos! Por favor, verifique as informações e tente novamente.".
 
 ```
-# Autenticação
+## Autenticação
 
 Essa automação funciona em conjunto com uma aplicação de autenticação encontrada em : [Sistemas de Autenticação](https://github.com/LeonRWorker/system-auth). Caso não utilize uma das aplicações listadas acima, ignore a url (link de acesso) informada nos cenários da funcionalidade a seguir e adapte o código.
 
@@ -154,7 +154,7 @@ Funcionalidade: Autenticação
 
 ```
 
-# Definição do Código 
+## Definição do Código 
 
 Para a definição do código será preciso utilizar dos métodos listados anteriormente, porém em inglês (Given, Then, When) para a realização dos testes.
 
@@ -174,7 +174,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 
 ```
 
-# Expressões 
+## Expressões 
 
 * Expressões Cucumber
 * Expressões Regulares
@@ -281,7 +281,7 @@ Then(/também exibida a mensagem : "Verifique suas credenciais, login ou senha i
 Note que na primeira sintaxe o código é simplificado, melhorando sua produtividade e mantendo código mais "clean"
 
  
-# Autenticação
+## Autenticação
 
 Relembrando, a automação funciona em conjunto com uma aplicação de autenticação encontrada em : [Sistemas de Autenticação](https://github.com/LeonRWorker/system-auth). Caso não utilize uma das aplicações listadas acima, ignore a url (link de acesso) informada nos cenários da funcionalidade a seguir e adapte o código.
 
