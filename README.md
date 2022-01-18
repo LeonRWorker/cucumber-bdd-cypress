@@ -295,9 +295,9 @@ import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
 Cypress.on('uncaught:exception', (err, runnable) => {
    return false
 })
-// -------------------------------------------
+// ----------------------------------------------------------
 // TO-DO 01: Autenticação com dados inválidos 
-// -------------------------------------------
+// ----------------------------------------------------------
 // Dado 
 Given(/que o usuário acesse a página "http://localhost:8080/frontend/"./, async () => {
     // Acessar página
