@@ -69,7 +69,7 @@ Dado
 
 ```feature
 
-      Dado que o usuário precise realizar a autenticação em um sistema".
+Dado que o usuário precise realizar a autenticação em um sistema".
 
 ```
 
@@ -78,7 +78,7 @@ Quando
 
 ```feature
 
-      Quando o usuário clicar no botão "Sair".
+Quando o usuário clicar no botão "Sair".
 
 ```
 Entao
@@ -86,7 +86,7 @@ Entao
 
 ```feature
 
-      Entao será exibida a mensagem : "Dados incorretos! Por favor, verifique as informações e tente novamente.".
+Entao será exibida a mensagem : "Dados incorretos! Por favor, verifique as informações e tente novamente.".
 
 ```
 # Autenticação
@@ -168,7 +168,7 @@ import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
 
 // Prevenir possíveis erros
 Cypress.on('uncaught:exception', (err, runnable) => {
-	return false
+    return false
 })
 
 
@@ -184,13 +184,13 @@ Expressões Cucumber
 * Gherkin
 ```feature
 
-      Cenario: Autenticação com dados inválidos
-          Dado que o usuário acesse a página "http://localhost:8080/frontend/".
-          E o usuário informa no campo "Login" o valor "inválido".
-          E o usuário informa no campo "Senha" o valor "123456789".
-          Quando o usuário clica no botão "Entrar".
-          Entao será exibida a mensagem : "Não foi possível realizar a autenticação no sistema!".
-          E também será exibida a mensagem : "Verifique suas credenciais, login ou senha inválidos!".
+Cenario: Autenticação com dados inválidos
+    Dado que o usuário acesse a página "http://localhost:8080/frontend/".
+    E o usuário informa no campo "Login" o valor "inválido".
+    E o usuário informa no campo "Senha" o valor "123456789".
+    Quando o usuário clica no botão "Entrar".
+    Entao será exibida a mensagem : "Não foi possível realizar a autenticação no sistema!".
+    E também será exibida a mensagem : "Verifique suas credenciais, login ou senha inválidos!".
 
 ```
 
