@@ -161,7 +161,7 @@ Funcionalidade: Autenticação
 
 ```
 
-## Definição do Código
+### Definição do Código
 
 Para a definição do código será preciso utilizar dos métodos listados anteriormente, porém em inglês (Given, Then, When) para a realização dos testes.
 
