@@ -8,11 +8,13 @@ A aplicação consiste em uma ferramenta que verifica se cada elemento encontrad
 
 # Tecnologias utilizadas
 ## Front-End
-- HTML / CSS / JavaScript
+- HTML
+- CSS 
+- JavaScript
 ## Back-End
 - JavaScript (Cypress)
 - Cucumber (Gherkin)
-- 
+
 # 💻 Pré-Requisitos
 
 * Gherkin Cucumber (Extensão Visual Studio Code)
