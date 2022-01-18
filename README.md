@@ -1,5 +1,3 @@
-# Testes Automatizados Frontend
-
 # Sobre o projeto
 
 Trata-se de uma automação de testes com intuito de verificar cada elemento ou dado exibido pelo sistema que já foi ou está sendo desenvolvido por você, sua equipe de desenvolvimento ou órgão e empresa a qual se encontra.
@@ -42,3 +40,9 @@ npm test -- --runInBand
 # Autor
 
 [Leonardo Marques](https://github.com/LeonRWorker/)
+
+# Documentação 
+
+[1.1]: http://i.imgur.com/tXSoThF.png (texto título)
+
+
