@@ -314,7 +314,7 @@ Given(/que o usuário acesse a página "([^"]+)"./, async () => {
 // Quando 
 When(/o usuário clica no botão "Entrar"./, async () => {
     // Clicar no botão entrar
-    await cy.xpath('//input[@type="submit"]').click()
+    await cy.get('button').should('have.value', 'Entrar').click()
     // Tempo de espera para outra ação
     await cy.wait(2000)
 })
@@ -366,7 +366,7 @@ When(/o usuário informa no campo "Senha" o valor "123456789"./, async () => {
 // Quando 
 When(/o usuário clica no botão "Entrar"./, async () => {
     // Clicar no botão entrar
-    await cy.xpath('//input[@type="submit"]').click()
+    await cy.get('button').should('have.value', 'Entrar').click()
     // Tempo de espera para outra ação
     await cy.wait(2000)
 })
@@ -411,7 +411,7 @@ Then(/o usuário informa no campo "Senha" o valor "a"./, async () => {
 // Quando 
 When(/o usuário clica no botão "Entrar"./, async () => {
     // Clicar no botão entrar
-    await cy.xpath('//input[@type="submit"]').click()
+    await cy.get('button').should('have.value', 'Entrar').click()
     // Tempo de espera para outra ação
     await cy.wait(2000)
 })
@@ -463,7 +463,7 @@ When(/o usuário informa no campo "Senha" o valor "a.d.m.i.n.i.s.t.r.a.d.o.r"./,
 // Quando 
 When(/o usuário clica no botão "Entrar"./, async () => {
     // Clicar no botão entrar
-    await cy.xpath('//input[@type="submit"]').click()
+    await cy.get('button').should('have.value', 'Entrar').click()
     // Tempo de espera para outra ação
     await cy.wait(2000)
 })
@@ -515,7 +515,7 @@ When(/o usuário informa no campo "Senha" o valor "admin@2022"./, async () => {
 // Quando 
 When(/o usuário clica no botão "Entrar"./, async () => {
     // Clicar no botão entrar
-    await cy.xpath('//input[@type="submit"]').click()
+    await cy.get('button').should('have.value', 'Entrar').click()
     // Tempo de espera para outra ação
     await cy.wait(2000)
 })
@@ -553,7 +553,7 @@ When(/o usuário informa no campo "Senha" o valor "admin@2022"./, async () => {
 // Quando 
 When(/o usuário clica no botão "Entrar"./, async () => {
     // Clicar no botão entrar
-    await cy.xpath('//input[@type="submit"]').click()
+    await cy.get('button').should('have.value', 'Entrar').click()
     // Tempo de espera para outra ação
     await cy.wait(2000)
 })
