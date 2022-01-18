@@ -43,6 +43,6 @@ npm test -- --runInBand
 
 # Documentação 
 
-[1.1]: http://i.imgur.com/tXSoThF.png (texto título)
+[1.1]: https://static1.smartbear.co/cucumber/media/images/logos/icons/cucumber-open-icon.svg (texto título)
 
 
