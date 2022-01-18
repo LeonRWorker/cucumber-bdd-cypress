@@ -48,13 +48,13 @@ npm test -- --runInBand
 
 Para definir uma funcionalidade será preciso utilizar dos métodos (Dado, Quando, Entao) para realizar as ações nas implementações dos testes.
 
-- Dado 
+Dado 
 * Utilizado para informar a primeira condição, servindo para informar o que precisa ou será feito. Ex : "Dado que o usuário precise realizar a autenticação em um sistema".
-- 
-- Quando
+
+Quando
 * Utilizado para informar uma ação em um determinado período, servindo para informar o que e quando está sendo realizada a ação. Ex : "Quando o usuário clicar no botão 'Sair'.".
-- 
-- Entao
+
+Entao
 * Utilizado para informar o resultado das ações realizadas, geralmente composto por uma sintaxa que contenha a mensagem do retorno da API. Ex : "Entao será exibida a mensagem : "Dados incorretos! Por favor, verifique as informações e tente novamente.".
 
 ```feature
