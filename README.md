@@ -61,14 +61,30 @@ Você notou o comentário "#language: pt" ? Esse argumento serve para identifica
 Gherkin Cucumber (Extensão Visual Studio Code).
 
 Dado 
-* Utilizado para informar a primeira condição, servindo para informar o que precisa ou será feito. Ex : "Dado que o usuário precise realizar a autenticação em um sistema".
+* Utilizado para informar a primeira condição, servindo para informar o que precisa ou será feito.
+
+```feature
+
+      Dado que o usuário precise realizar a autenticação em um sistema".
+
+```
 
 Quando
-* Utilizado para informar uma ação em um determinado período, servindo para informar o que e quando está sendo realizada a ação. Ex : "Quando o usuário clicar no botão 'Sair'.".
+* Utilizado para informar uma ação em um determinado período, servindo para informar o que e quando está sendo realizada a ação.
 
+```feature
+
+      Quando o usuário clicar no botão "Sair".
+
+```
 Entao
-* Utilizado para informar o resultado das ações realizadas, geralmente composto por uma sintaxa que contenha a mensagem do retorno da API. Ex : "Entao será exibida a mensagem : "Dados incorretos! Por favor, verifique as informações e tente novamente.".
+* Utilizado para informar o resultado das ações realizadas, geralmente composto por uma sintaxa que contenha a mensagem do retorno da API.
 
+```feature
+
+      Entao será exibida a mensagem : "Dados incorretos! Por favor, verifique as informações e tente novamente.".
+
+```
 # Autenticação
 
 Essa automação funciona em conjunto com uma aplicação de autenticação encontrada em : [Sistemas de Autenticação](https://github.com/LeonRWorker/system-auth). Caso não utilize uma das aplicações listadas acima, ignore a url (link de acesso) informada nos cenários da funcionalidade a seguir.
