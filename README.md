@@ -91,7 +91,7 @@ Entao
 ```
 # Autenticação
 
-Essa automação funciona em conjunto com uma aplicação de autenticação encontrada em : [Sistemas de Autenticação](https://github.com/LeonRWorker/system-auth). Caso não utilize uma das aplicações listadas acima, ignore a url (link de acesso) informada nos cenários da funcionalidade a seguir.
+Essa automação funciona em conjunto com uma aplicação de autenticação encontrada em : [Sistemas de Autenticação](https://github.com/LeonRWorker/system-auth). Caso não utilize uma das aplicações listadas acima, ignore a url (link de acesso) informada nos cenários da funcionalidade a seguir e adapte o código.
 
 ```feature
 
@@ -279,6 +279,77 @@ Then(/também exibida a mensagem : "Verifique suas credenciais, login ou senha i
 ```
 
 Note que na primeira sintaxe o código é simplificado, melhorando sua produtividade e mantendo código mais "clean"
+
+ 
+# Autenticação
+
+Relembrando, a automação funciona em conjunto com uma aplicação de autenticação encontrada em : [Sistemas de Autenticação](https://github.com/LeonRWorker/system-auth). Caso não utilize uma das aplicações listadas acima, ignore a url (link de acesso) informada nos cenários da funcionalidade a seguir e adapte o código.
+
+```javascript
+
+// Importação das expressões
+import { expect } from "chai";
+import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
+
+// Prevenir possíveis erros
+Cypress.on('uncaught:exception', (err, runnable) => {
+	return false
+})
+// TO-DO 01: Autenticação com dados inválidos 
+// Dado 
+Given(/que o usuário acesse a página "http://localhost:8080/frontend/"./, async () => {
+      // Acessar página
+      await cypress.visit('/')
+      // Tempo de espera para outra ação
+      await cy.wait(2000)
+})
+// E 
+Then(/o usuário informa no campo "Login" o valor "inválido"./, async () => {
+    // Informar valor "inválido" no campo login
+	await cy.xpath('//input[@id="login"]').focus().clear().type('inválido')
+    // Tempo de espera para outra ação
+    await cy.wait(2000)
+})
+// E 
+Then(/o usuário informa no campo "Senha" o valor "123456789"./, async () => {
+    // Informar valor "123456789" no campo senha
+	await cy.xpath('//input[@id="senha"]').focus().clear().type('123456789')
+    // Tempo de espera para outra ação
+    await cy.wait(2000)
+})
+// Quando 
+Then(/o usuário clica no botão "Entrar"./, async () => {
+    // Clicar no botão entrar
+	await cy.xpath('//input[@type="submit"]').click()
+    // Tempo de espera para outra ação
+    await cy.wait(2000)
+})
+// Entao 
+When(/será exibida a mensagem : "Não foi possível realizar a autenticação no sistema!"./, async () => {
+    // Mensagem de erro
+	await cy.get('p').should('have.value', 'Não foi possível realizar a autenticação no sistema!').invoke('text').then((text) => {
+		// Mensagem 
+		const message = 'Não foi possível realizar a autenticação no sistema!'
+		// Retorno esperado
+		expect(text).to.contain(message)
+    })
+    // Tempo de espera para outra ação
+    await cy.wait(2000)
+})
+// E 
+Then(/também exibida a mensagem : "Verifique suas credenciais, login ou senha inválidos!"./, async () => {
+    // Mensagem de erro
+	await cy.get('p').should('have.value', 'Verifique suas credenciais, login ou senha inválidos!').invoke('text').then((text) => {
+		// Mensagem 
+		const message = 'Verifique suas credenciais, login ou senha inválidos!'
+		// Retorno esperado
+		expect(text).to.contain(message)
+    })
+    // Tempo de espera para outra ação
+    await cy.wait(2000)
+})
+
+```
 
 # Autor
 
