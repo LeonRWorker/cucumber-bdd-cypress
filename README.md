@@ -43,6 +43,15 @@ npm test -- --runInBand
 
 # Documentação 
 
+
+# Funcionalidade 
+
+Para definir uma funcionalidade será preciso utilizar dos métodos (Dado, Quando, Entao) para realizar as ações nas implementações dos testes.
+
+- Dado : É utilizado para informar a primeira condição, servindo para informar o que precisa ou será feito. Ex : "Dado que o usuário precise realizar a autenticação em um sistema".
+- Quando : É utilizado para informar uma ação em um determinado período, servindo para informar o que e quando está sendo realizada a ação. Ex : "Quando o usuário clicar no botão 'Sair'.".
+- Entao : É utilizado para informar o resultado das ações realizadas, geralmente composto por uma sintaxa que contenha a mensagem do retorno da API. Ex : "Entao será exibida a mensagem : "Dados incorretos! Por favor, verifique as informações e tente novamente.".
+
 ```feature
 
 #language: pt
@@ -56,8 +65,8 @@ Funcionalidade: Autenticação
           Dado que o usuário acesse a página "http://localhost:8080/frontend/".
           Quando o usuário clica no botão "Entrar".
           Entao será exibida a mensagem : "Não foi possível realizar a autenticação no sistema!".
-          E será exibida a mensagem "Por favor, preencha o campo 'Login'".
-          E será exibida a mensagem "Por favor, preencha o campo 'Senha'".
+          E será exibida a mensagem : "Por favor, preencha o campo 'Login'".
+          E será exibida a mensagem : "Por favor, preencha o campo 'Senha'".
      
      Cenario: Autenticação com dados inválidos
           Dado que o usuário acesse a página "http://localhost:8080/frontend/".
@@ -65,7 +74,7 @@ Funcionalidade: Autenticação
           E o usuário informa no campo "Senha" o valor "admin@2022".
           Quando o usuário clica no botão "Entrar".
           Entao será exibida a mensagem : "Não foi possível realizar a autenticação no sistema!".
-          E será exibida a mensagem "Verifique suas credenciais, login ou senha inválidos!".
+          E será exibida a mensagem : "Verifique suas credenciais, login ou senha inválidos!".
      
      Cenario: Limite mínimo de caracteres
           Dado que o usuário acesse a página "http://localhost:8080/frontend/".
@@ -73,8 +82,8 @@ Funcionalidade: Autenticação
           E o usuário informa no campo "Senha" o valor "a".
           Quando o usuário clica no botão "Entrar".
           Entao será exibida a mensagem : "Não foi possível realizar a autenticação no sistema!".
-          E será exibida a mensagem "O campo 'Login' não pode ter menos de 4 caracteres.".
-          E será exibida a mensagem "O campo 'Senha' não pode ter menos de 8 caracteres.".
+          E será exibida a mensagem : "O campo 'Login' não pode ter menos de 4 caracteres.".
+          E será exibida a mensagem : "O campo 'Senha' não pode ter menos de 8 caracteres.".
      
      Cenario: Limite máximo de caracteres
           Dado que o usuário acesse a página "http://localhost:8080/frontend/".
@@ -82,8 +91,8 @@ Funcionalidade: Autenticação
           E o usuário informa no campo "Senha" o valor "a.d.m.i.n.i.s.t.r.a.d.o.r".
           Quando o usuário clica no botão "Entrar".
           Entao será exibida a mensagem : "Não foi possível realizar a autenticação no sistema!".
-          E será exibida a mensagem "O campo 'Login' não pode ter mais de 12 caracteres.".
-          E será exibida a mensagem "O campo 'Senha' não pode ter mais de 12 caracteres.".
+          E será exibida a mensagem : "O campo 'Login' não pode ter mais de 12 caracteres.".
+          E será exibida a mensagem : "O campo 'Senha' não pode ter mais de 12 caracteres.".
      
      Cenario: Autenticação com dados válidos
           Dado que o usuário acesse a página "http://localhost:8080/frontend/".
@@ -91,6 +100,16 @@ Funcionalidade: Autenticação
           E o usuário informa no campo "Senha" o valor "admin@2022".
           Quando o usuário clica no botão "Entrar".
           Entao será exibida a mensagem : "Autenticação realizada com sucesso!".
+     
+     Cenario: Logout
+          Dado que o usuário acesse a página "http://localhost:8080/frontend/".
+          E o usuário informa no campo "Login" o valor "administrador".
+          E o usuário informa no campo "Senha" o valor "admin@2022".
+          Quando o usuário clica no botão "Entrar".
+          Entao será exibida a mensagem : "Autenticação realizada com sucesso!".
+          Quando o usupario cica no botão "Sair".
+          Entao será exibida a mensagem : "Você foi desconectado com sucesso!".
+          E o título da página atual é "Bem Vindo!".
 
 ```
 
