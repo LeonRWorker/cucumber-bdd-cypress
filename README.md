@@ -110,7 +110,7 @@ Funcionalidade: Autenticação
      Procedimentos para realizar a autenticação no sistema.
    
      Cenario: Autenticação sem dados
-          Dado que o usuário acesse a página "([^"]+)".
+          Dado que o usuário acesse a página "http://localhost:8080/frontend/".
           Quando o usuário clica no botão "Entrar".
           Entao será exibida a mensagem : "Não foi possível realizar a autenticação no sistema!".
           E para o campo "Login" será exibida a mensagem : "Por favor, preencha o campo 'Login'".
