@@ -4,6 +4,10 @@ Trata-se de uma automação de testes com intuito de verificar cada elemento ou 
 
 A aplicação consiste em uma ferramenta que verifica se cada elemento encontrado no HTML está funcionando corretamente, se as informações fornecidas pela API estão sendo exibidas corretamente e as verificações de tratamento de erros de formulários. Cada conjunto de teste realizado sobrepõem o seu antecessor, caso seja necessário o armazenamento do histórico dos testes será necessário renomear a pasta com o tempo específico de criação, ex: “Web.01.01.2022” ou se preferir você pode utilizar o Jenkins para gerenciar a automação e histórico de testes com o seu gerenciador de builds.
 
+# Autor
+
+[Leonardo Marques](https://github.com/LeonRWorker/)
+
 # Tecnologias utilizadas
 ## Front-End
 - HTML
@@ -36,10 +40,6 @@ npm test -- --runInBand
 
 
 ```
-
-# Autor
-
-[Leonardo Marques](https://github.com/LeonRWorker/)
 
 # Documentação da Aplicação
 
