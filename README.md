@@ -50,7 +50,7 @@ Uma funcionalidade pode ser entendica como um conjunto de ações que precisam s
 
 Para definir a sintax de uma funcionalidade será preciso utilizar dos métodos (Dado, Quando, Entao) para realizar as ações nas implementações dos testes. Para facilitar o gerenciamento da aplicação você também poderá adicionar uma "tag" antes da funcionalidade, facilitando o encontro de funcionalidades semelhantes. 
 
-Geralmente uma aplicação de relatórios contem mais de um tipo de relatório ou partes diferentes de um sistema, a utilização das tags facilitaria a visualização dos testes realizados
+Geralmente uma aplicação de relatórios contem mais de um tipo de relatório ou partes diferentes de um sistema, a utilização das tags facilitaria a visualização dos testes realizados.
 
 Para utilizar uma "tag", verifique o exemplo abaixo :
 
@@ -106,8 +106,8 @@ Funcionalidade: Autenticação
           Dado que o usuário acesse a página "http://localhost:8080/frontend/".
           Quando o usuário clica no botão "Entrar".
           Entao será exibida a mensagem : "Não foi possível realizar a autenticação no sistema!".
-          E será exibida a mensagem : "Por favor, preencha o campo 'Login'".
-          E será exibida a mensagem : "Por favor, preencha o campo 'Senha'".
+          E para o campo "Login" será exibida a mensagem : "Por favor, preencha o campo 'Login'".
+          E para o campo "Senha" será exibida a mensagem : "Por favor, preencha o campo 'Senha'".
      
      Cenario: Autenticação com dados inválidos
           Dado que o usuário acesse a página "http://localhost:8080/frontend/".
@@ -115,7 +115,7 @@ Funcionalidade: Autenticação
           E o usuário informa no campo "Senha" o valor "admin@2022".
           Quando o usuário clica no botão "Entrar".
           Entao será exibida a mensagem : "Não foi possível realizar a autenticação no sistema!".
-          E será exibida a mensagem : "Verifique suas credenciais, login ou senha inválidos!".
+          E também será exibida a mensagem : "Verifique suas credenciais, login ou senha inválidos!".
      
      Cenario: Limite mínimo de caracteres
           Dado que o usuário acesse a página "http://localhost:8080/frontend/".
@@ -123,8 +123,8 @@ Funcionalidade: Autenticação
           E o usuário informa no campo "Senha" o valor "a".
           Quando o usuário clica no botão "Entrar".
           Entao será exibida a mensagem : "Não foi possível realizar a autenticação no sistema!".
-          E será exibida a mensagem : "O campo 'Login' não pode ter menos de 4 caracteres.".
-          E será exibida a mensagem : "O campo 'Senha' não pode ter menos de 8 caracteres.".
+          E para o campo "Login" será exibida a mensagem : "O campo 'Login' não pode ter menos de 4 caracteres.".
+          E para o campo "Senha" será exibida a mensagem : "O campo 'Senha' não pode ter menos de 8 caracteres.".
      
      Cenario: Limite máximo de caracteres
           Dado que o usuário acesse a página "http://localhost:8080/frontend/".
@@ -132,8 +132,8 @@ Funcionalidade: Autenticação
           E o usuário informa no campo "Senha" o valor "a.d.m.i.n.i.s.t.r.a.d.o.r".
           Quando o usuário clica no botão "Entrar".
           Entao será exibida a mensagem : "Não foi possível realizar a autenticação no sistema!".
-          E será exibida a mensagem : "O campo 'Login' não pode ter mais de 12 caracteres.".
-          E será exibida a mensagem : "O campo 'Senha' não pode ter mais de 12 caracteres.".
+          E para o campo "Login" será exibida a mensagem : "O campo 'Login' não pode ter mais de 12 caracteres.".
+          E para o campo "Senha" será exibida a mensagem : "O campo 'Senha' não pode ter mais de 12 caracteres.".
      
      Cenario: Autenticação com dados válidos
           Dado que o usuário acesse a página "http://localhost:8080/frontend/".
@@ -154,6 +154,131 @@ Funcionalidade: Autenticação
 
 ```
 
+# Definição do Código 
+
+Para a definição do código será preciso utilizar dos métodos listados anteriormente, porém em inglês (Given, Then, When) para a realização dos testes.
+
+Sempre na definição do código adicione a importação das expressões. Além disso, adicione a função a baixo para prevenir o código de possíveis erros do próprio cypress. 
+
+```javascript
+
+// Importação das expressões
+import { expect } from "chai";
+import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
+
+// Prevenir possíveis erros
+Cypress.on('uncaught:exception', (err, runnable) => {
+	return false
+})
+
+
+```
+
+# Expressões 
+
+* Expressões Cucumber
+* Expressões Regulares
+
+Expressões Cucumber
+
+* Gherkin
+```feature
+
+      Cenario: Autenticação com dados inválidos
+          Dado que o usuário acesse a página "http://localhost:8080/frontend/".
+          E o usuário informa no campo "Login" o valor "inválido".
+          E o usuário informa no campo "Senha" o valor "123456789".
+          Quando o usuário clica no botão "Entrar".
+          Entao será exibida a mensagem : "Não foi possível realizar a autenticação no sistema!".
+          E também será exibida a mensagem : "Verifique suas credenciais, login ou senha inválidos!".
+
+```
+
+Para os valores identificados como string (valores entre aspas),você poderá utilizar a sitaxe abaixo : 
+
+* JavaScript
+
+```javascript
+
+// Importação das expressões
+import { expect } from "chai";
+import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
+
+// Prevenir possíveis erros
+Cypress.on('uncaught:exception', (err, runnable) => {
+	return false
+})
+
+// Dado 
+Given(/que o usuário acesse a página "([^"]+)"./, async () => {
+      // Código da automação
+})
+// E 
+Then(/o usuário informa no campo "Login" o valor "([^"]+)"./, async () => {
+      // Código da automação
+})
+// E 
+Then(/o usuário informa no campo "Senha" o valor "([^"]+)"./, async () => {
+      // Código da automação
+})
+// Quando 
+Then(/o usuário clica no botão "Entrar"./, async () => {
+      // Código da automação
+})
+// Entao 
+When(/será exibida a mensagem : "([^"]+)"./, async () => {
+      // Código da automação
+})
+// E 
+Then(/também exibida a mensagem : "([^"]+)"./, async () => {
+      // Código da automação
+})
+
+```
+
+Ou a sintaxe padrão : 
+
+* JavaScript
+
+```javascript
+
+// Importação das expressões
+import { expect } from "chai";
+import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
+
+// Prevenir possíveis erros
+Cypress.on('uncaught:exception', (err, runnable) => {
+	return false
+})
+
+// Dado 
+Given(/que o usuário acesse a página "http://localhost:8080/frontend/"./, async () => {
+      // Código da automação
+})
+// E 
+Then(/o usuário informa no campo "Login" o valor "inválido"./, async () => {
+      // Código da automação
+})
+// E 
+Then(/o usuário informa no campo "Senha" o valor "123456789"./, async () => {
+      // Código da automação
+})
+// Quando 
+Then(/o usuário clica no botão "Entrar"./, async () => {
+      // Código da automação
+})
+// Entao 
+When(/será exibida a mensagem : "Não foi possível realizar a autenticação no sistema!"./, async () => {
+      // Código da automação
+})
+// E 
+Then(/também exibida a mensagem : "Verifique suas credenciais, login ou senha inválidos!"./, async () => {
+      // Código da automação
+})
+
+```
+
+Note que na primeira sintaxe o código é simplificado, melhorando sua produtividade e mantando código mais "clean"
 
 # Autor
 
