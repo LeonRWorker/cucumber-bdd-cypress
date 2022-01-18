@@ -329,24 +329,14 @@ Then(/o usuário clica no botão "Entrar"./, async () => {
 // Entao 
 When(/será exibida a mensagem : "Não foi possível realizar a autenticação no sistema!"./, async () => {
     // Mensagem de erro
-    await cy.get('p').should('have.value', 'Não foi possível realizar a autenticação no sistema!').invoke('text').then((text) => {
-	// Mensagem 
-	const message = 'Não foi possível realizar a autenticação no sistema!'
-	// Retorno esperado
-	expect(text).to.contain(message)
-    })
+    await cy.get('p').should('have.value', 'Não foi possível realizar a autenticação no sistema!')
     // Tempo de espera para outra ação
     await cy.wait(2000)
 })
 // E 
 Then(/também exibida a mensagem : "Verifique suas credenciais, login ou senha inválidos!"./, async () => {
     // Mensagem de erro
-    await cy.get('p').should('have.value', 'Verifique suas credenciais, login ou senha inválidos!').invoke('text').then((text) => {
-	// Mensagem 
-	const message = 'Verifique suas credenciais, login ou senha inválidos!'
-	// Retorno esperado
-	expect(text).to.contain(message)
-    })
+    await cy.get('p').should('have.value', 'Verifique suas credenciais, login ou senha inválidos!')
     // Tempo de espera para outra ação
     await cy.wait(2000)
 })
