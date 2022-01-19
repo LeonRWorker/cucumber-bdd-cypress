@@ -260,7 +260,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 })
 
 // Dado 
-Given(/que o usuário acesse a página "http://localhost:8080/frontend/"./, async () => {
+Given(/que o usuário acesse a página "([^"]+)"./, async () => {
    // Código da automação
 })
 // E 
